@@ -1,6 +1,6 @@
 import { SigningCosmWasmClient } from "@cosmjs/cosmwasm-stargate";
 import { DirectSecp256k1HdWallet } from "@cosmjs/proto-signing";
-import { calculateFee, GasPrice } from "@cosmjs/stargate";
+// import { calculateFee, gasPrice } from "@cosmjs/stargate";
 import {
     coin,
     coins,
@@ -10,10 +10,10 @@ import {
   } from "@cosmjs/launchpad";
 import * as fs from "fs";
 
-const rpcEndpoint = "http://localhost:26659";
+const rpcEndpoint = "https://rpc-juno.itastakers.com/";
 
 // Upload contract
-const wasm = fs.readFileSync(hackatomWasmPath);
+const wasm = fs.readFileSync();
 const uploadFee = calculateFee(1_500_000, GasPrice);
 const codeMeta = {
   source: "https://crates.io/api/v1/crates/hackatom/not-yet-released/download",
@@ -50,7 +50,7 @@ const executeFee = calculateFee(300_000, GasPrice);
 const result = await client.execute(alice.address0, contractAddress, { release: {} }, executeFee);
 const wasmEvent = result.logs[0].events.find((e) => e.type === "wasm");
 console.info("The `wasm` event emitted by the contract execution:", wasmEvent);
-}
+
 
 const repoRoot = process.cwd() + "/../.."; // This assumes you are in `packages/cli`
 const hackatom = `${repoRoot}/scripts/wasmd/contracts/hackatom.wasm`;
