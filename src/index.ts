@@ -8,7 +8,7 @@ const Bot = new telegram(TELEGRAM_KEY, { polling: true });
 
 Bot.onText(/\/start/, (msg) => {
   if (!msg.from) return Bot.sendMessage(msg.chat.id, "I not accept you!");
-  Bot.sendMessage(msg.chat.id, "Wellcome to GeniusAnswer, ask me something");
+  Bot.sendMessage(msg.chat.id, "Wellcome to Juno Bot, ask me something");
 });
 
 const wikisearch = async (topic: string, pageIndex: number) => {
