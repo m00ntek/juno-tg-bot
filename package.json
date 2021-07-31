@@ -20,5 +20,9 @@
   "homepage": "https://github.com/Highlander-maker/juno-tg-bot#readme",
   "devDependencies": {
     "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@cosmjs/cosmwasm-stargate": "^0.25.6",
+    "node-telegram-bot-api": "^0.54.0"
   }
 }
