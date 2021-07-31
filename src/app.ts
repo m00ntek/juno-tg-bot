@@ -28,7 +28,12 @@ Bot.on("document", async (msg) => {
         const wasmData = await getFileBuffer(Bot, fileId);
 
         const [client, address] = await getWasmClient(wallet);
-        const response = await client.upload(address, wasmData, undefined, "Tg bot");
+        const response = await client.upload(
+            address,
+            wasmData, 
+            undefined, // { source: "https://crates.io/download/file.wasm", builder: "cosmwasm/rust-optimizer:0.11.3"}
+            "Tg bot" // memo
+        );
 
         const textReply = `Your CODE ID: <a href="https://blueprints.juno.giansalex.dev/#/codes/${response.codeId}">${response.codeId}</a>`;
         await Bot.sendMessage(msg.chat.id, textReply, {
