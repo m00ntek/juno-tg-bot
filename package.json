@@ -1,0 +1,24 @@
+{
+  "name": "juno-tg-bot",
+  "version": "1.0.0",
+  "description": "Juno Interaction Telegram Bot.",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Highlander-maker/juno-tg-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Highlander-maker/juno-tg-bot/issues"
+  },
+  "homepage": "https://github.com/Highlander-maker/juno-tg-bot#readme",
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  }
+}
