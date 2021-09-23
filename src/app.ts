@@ -2,6 +2,10 @@ import telegram from 'node-telegram-bot-api';
 import { extname } from 'path';
 import { getWasmClient } from './client';
 import { getFileBuffer } from './util';
+import * as dotenv from 'dotenv';
+dotenv.config();
+
+
 
 const token = process.env.TELEGRAM_TOKEN || "YOUR_TELEGRAM_BOT_TOKEN";
 const wallet = process.env.WALLET || "YOUR_MNEMONIC";
