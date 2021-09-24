@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Highlander-maker/juno-tg-bot#readme",
   "devDependencies": {
+    "@types/node-telegram-bot-api": "^0.51.4",
     "typescript": "^4.3.5"
   },
   "dependencies": {

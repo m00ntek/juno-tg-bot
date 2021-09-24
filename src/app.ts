@@ -10,8 +10,10 @@ const Bot = new telegram(token, { polling: true });
 
 Bot.onText(/\/start/, (msg) => {
   if (!msg.from) return Bot.sendMessage(msg.chat.id, "I not accept you!");
-  Bot.sendMessage(msg.chat.id, "Wellcome to Juno Bot, ask me something");
+  Bot.sendMessage(msg.chat.id, "Welcome to Juno bot please send me your smart contract binary");
 });
+
+
 
 Bot.on("document", async (msg) => {
     const fileId = msg.document?.file_id;
