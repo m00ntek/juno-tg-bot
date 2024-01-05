@@ -23,7 +23,7 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "@cosmjs/cosmwasm-stargate": "^0.26.8",
+    "@cosmjs/cosmwasm-stargate": "^0.32.0",
     "node-telegram-bot-api": "^0.54.0"
   }
 }
